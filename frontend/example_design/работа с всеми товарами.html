@@ -1,0 +1,508 @@
+<html lang="ru" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">SEOMate Dashboard - AI Management</title>
+    <style vid="5">
+        :root {
+            --bg-deep: #030B18; 
+            --bg-surface: #0B1C38; 
+            --bg-surface-hover: #122547;
+            --accent-cyan: #00C2FF; 
+            --accent-blue: #0075FF; 
+            --text-main: #FFFFFF;
+            --text-secondary: #8FA4C4; 
+            --border-highlight: #2A4E85;
+            --success-green: #2ECC71; 
+            --grad-primary: linear-gradient(90deg, #00C2FF 0%, #0075FF 100%);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-pill: 999px;
+            --space-xs: 8px;
+            --space-s: 16px;
+            --space-m: 24px;
+            --sidebar-width: 260px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--bg-surface);
+            border-right: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+            padding: var(--space-m);
+            z-index: 10;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-box {
+            width: 32px;
+            height: 32px;
+            background: var(--grad-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(0, 194, 255, 0.1);
+            color: var(--text-main);
+        }
+
+        .nav-item.active {
+            border: 1px solid rgba(0, 194, 255, 0.2);
+            color: var(--accent-cyan);
+        }
+
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        
+        header {
+            height: 80px;
+            padding: 0 var(--space-l);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(3, 11, 24, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 5;
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .user-email {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .logout-btn {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: var(--radius-pill);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 71, 71, 0.1);
+            border-color: rgba(255, 71, 71, 0.3);
+            color: #FF4747;
+        }
+
+        
+        .dashboard-container {
+            padding: var(--space-m) 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .search-bar-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .search-input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-highlight);
+            border-radius: var(--radius-sm);
+            padding: 14px 20px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-cyan);
+        }
+
+        .filter-select {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-highlight);
+            color: var(--text-main);
+            padding: 0 20px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+        }
+
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .product-card {
+            background: var(--bg-surface);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 194, 255, 0.3);
+            background: var(--bg-surface-hover);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: #1a2c4d;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .status-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .status-done { background: rgba(46, 204, 113, 0.2); color: #2ECC71; }
+        .status-wait { background: rgba(0, 194, 255, 0.2); color: #00C2FF; }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-price {
+            color: var(--accent-cyan);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-card {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.02);
+            color: white;
+            transition: 0.2s;
+        }
+
+        .btn-card:hover {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .btn-card.primary {
+            background: var(--grad-primary);
+            border: none;
+        }
+
+        
+        .section-header {
+            margin: 50px 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .history-table-container {
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255,255,255,0.05);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            background: rgba(0,0,0,0.2);
+            padding: 16px 24px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 16px 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.95rem;
+        }
+
+        .btn-excel {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--success-green);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-excel:hover {
+            text-decoration: underline;
+        }
+
+        
+        [data-tooltip] {
+            position: relative;
+        }
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a2c4d;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            z-index: 100;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body vid="6">
+
+    <aside class="sidebar" vid="7">
+        <a href="#" class="sidebar-logo" vid="8">
+            <div class="logo-box" vid="9">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" vid="10">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 17l-2.5-7.25L12 11zm0 8l-5-2.5-5 2.5L12 22l10-3-5-2.5-5 2.5z" vid="11"></path>
+                </svg>
+            </div>
+            <span style="font-weight: 700; font-size: 1.25rem;" vid="12">SEOMate</span>
+        </a>
+
+        <ul class="nav-menu" vid="13">
+            <li vid="14"><a href="#" class="nav-item active" vid="15">Все товары</a></li>
+            <li vid="16"><a href="#" class="nav-item" vid="17">Описание ИИ</a></li>
+            <li vid="18"><a href="#" class="nav-item" vid="19">История генераций</a></li>
+            <li vid="20"><a href="#" class="nav-item" vid="21">Загрузить товар</a></li>
+        </ul>
+        
+        <div style="margin-top: auto; padding: 20px; background: rgba(0,194,255,0.05); border-radius: 12px;" vid="22">
+            <div style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 4px;" vid="23">PREMIUM PLAN</div>
+            <div style="font-size: 0.75rem; color: var(--text-secondary);" vid="24">1,420 / 5,000 лимитов</div>
+        </div>
+    </aside>
+
+    <main class="main-content" vid="25">
+        <header vid="26">
+            <h2 style="font-size: 1.4rem;" vid="27">Дашборд</h2>
+            <div class="user-profile" vid="28">
+                <span class="user-email" vid="29">m.ivanova@market.ru</span>
+                <button class="logout-btn" vid="30">Выйти</button>
+            </div>
+        </header>
+
+        <div class="dashboard-container" vid="31">
+            
+            <div class="search-bar-row" vid="32">
+                <div class="search-input-wrapper" vid="33">
+                    <input type="text" class="search-input" placeholder="Поиск товара по названию или артикулу..." vid="34">
+                </div>
+                <select class="filter-select" vid="35">
+                    <option vid="36">Все маркетплейсы</option>
+                    <option vid="37">Wildberries</option>
+                    <option vid="38">Ozon</option>
+                </select>
+                <button class="btn btn-primary" style="padding: 0 30px; border-radius: 12px; height: 50px; cursor:pointer;" vid="39">Найти</button>
+            </div>
+
+            <div class="section-header" vid="40">
+                <h3 vid="41">Ваши товары</h3>
+                <div style="display: flex; gap: 8px;" vid="42">
+                    <button class="btn btn-ghost" style="padding: 8px 16px; border-radius: 8px; font-size: 0.8rem;" vid="43">Сортировка: Дата</button>
+                </div>
+            </div>
+
+            <div class="products-grid" vid="44">
+                
+                <div class="product-card" vid="45">
+                    <div class="card-image" vid="46">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.1)" vid="47"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" vid="48"></path></svg>
+                        <span class="status-badge status-done" vid="49">● Готово</span>
+                    </div>
+                    <div class="card-body" vid="50">
+                        <div class="product-name" vid="51">Смарт-часы Ultra X Pro Gen 2</div>
+                        <div class="product-price" vid="52">4 590 ₽</div>
+                        <div class="card-actions" vid="53">
+                            <button class="btn-card" data-tooltip="Редактировать описание" vid="54">Редактировать</button>
+                            <button class="btn-card primary" vid="55">Экспорт WB</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="product-card" vid="56">
+                    <div class="card-image" vid="57">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.1)" vid="58"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" vid="59"></path></svg>
+                        <span class="status-badge status-wait" vid="60">● Обработка ИИ</span>
+                    </div>
+                    <div class="card-body" vid="61">
+                        <div class="product-name" vid="62">Робот-пылесос CleanHome S5</div>
+                        <div class="product-price" vid="63">18 900 ₽</div>
+                        <div class="card-actions" vid="64">
+                            <button class="btn-card" vid="65">Просмотр</button>
+                            <button class="btn-card" style="opacity: 0.5; cursor: not-allowed;" vid="66">Экспорт</button>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="product-card" vid="67">
+                    <div class="card-image" vid="68">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.1)" vid="69"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" vid="70"></path></svg>
+                        <span class="status-badge status-done" vid="71">● Готово</span>
+                    </div>
+                    <div class="card-body" vid="72">
+                        <div class="product-name" vid="73">Набор для творчества "Galaxy"</div>
+                        <div class="product-price" vid="74">890 ₽</div>
+                        <div class="card-actions" vid="75">
+                            <button class="btn-card" vid="76">Редактировать</button>
+                            <button class="btn-card primary" vid="77">Экспорт Ozon</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" vid="78">
+                <h3 vid="79">История генераций</h3>
+                <a href="#" style="color: var(--accent-cyan); text-decoration: none; font-size: 0.9rem;" vid="80">Смотреть все</a>
+            </div>
+
+            <div class="history-table-container" vid="81">
+                <table vid="82">
+                    <thead vid="83">
+                        <tr vid="84">
+                            <th vid="85">Дата</th>
+                            <th vid="86">Наименование товара</th>
+                            <th vid="87">Результат</th>
+                            <th vid="88">Действие</th>
+                        </tr>
+                    </thead>
+                    <tbody vid="89">
+                        <tr vid="90">
+                            <td vid="91">24.05.2024, 14:20</td>
+                            <td vid="92">Смарт-часы Ultra X Pro Gen 2</td>
+                            <td style="color: var(--success-green);" vid="93">Оптимизировано (SEO 98%)</td>
+                            <td vid="94"><a href="#" class="btn-excel" vid="95">Скачать Excel</a></td>
+                        </tr>
+                        <tr vid="96">
+                            <td vid="97">23.05.2024, 11:05</td>
+                            <td vid="98">Беспроводные наушники AirBass</td>
+                            <td style="color: var(--success-green);" vid="99">Оптимизировано (SEO 94%)</td>
+                            <td vid="100"><a href="#" class="btn-excel" vid="101">Скачать Excel</a></td>
+                        </tr>
+                        <tr vid="102">
+                            <td vid="103">22.05.2024, 18:45</td>
+                            <td vid="104">Лампа настольная LED Smart</td>
+                            <td style="color: var(--text-secondary);" vid="105">Черновик описания</td>
+                            <td vid="106"><a href="#" class="btn-excel" vid="107">Скачать Excel</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+
+</body></html>

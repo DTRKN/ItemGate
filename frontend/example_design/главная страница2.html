@@ -1,0 +1,382 @@
+<html lang="ru" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">SEOMate — Добро пожаловать</title>
+    <style vid="5">
+        :root {
+            --bg-deep: #030B18; 
+            --bg-surface: #0B1C38; 
+            --bg-surface-hover: #122547;
+            --accent-cyan: #00C2FF; 
+            --accent-blue: #0075FF; 
+            --text-main: #FFFFFF;
+            --text-secondary: #8FA4C4; 
+            --border-highlight: #2A4E85;
+            --success-green: #2ECC71; 
+            --grad-primary: linear-gradient(90deg, #00C2FF 0%, #0075FF 100%);
+            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-pill: 999px;
+            --space-s: 16px;
+            --space-m: 24px;
+            --space-l: 40px;
+            --space-xl: 80px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-stack);
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 117, 255, 0.08) 0%, rgba(3, 11, 24, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header {
+            padding: var(--space-m) var(--space-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: rgba(3, 11, 24, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--grad-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text { font-size: 1.2rem; font-weight: 700; }
+
+        .onboarding-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            flex: 1;
+            z-index: 1;
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .content-side {
+            padding: var(--space-xl);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .welcome-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(0, 194, 255, 0.1);
+            border-radius: var(--radius-pill);
+            color: var(--accent-cyan);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: var(--space-m);
+            width: fit-content;
+        }
+
+        h1 { font-size: 3rem; line-height: 1.2; margin-bottom: var(--space-s); font-weight: 800; }
+        .subtext { color: var(--text-secondary); font-size: 1.1rem; margin-bottom: var(--space-l); max-width: 480px; }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-m);
+            margin-bottom: var(--space-l);
+        }
+
+        .step-item {
+            display: flex;
+            gap: var(--space-s);
+            align-items: flex-start;
+        }
+
+        .step-num {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        .step-text h4 { margin-bottom: 4px; font-size: 1.1rem; }
+        .step-text p { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .btn-primary {
+            background: var(--grad-primary);
+            color: white;
+            padding: 18px 40px;
+            border-radius: var(--radius-pill);
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            width: fit-content;
+            box-shadow: 0 4px 20px rgba(0, 194, 255, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .btn-primary:hover { transform: translateY(-2px); }
+
+        .preview-side {
+            background: radial-gradient(circle at center, rgba(0, 117, 255, 0.05) 0%, transparent 70%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .preview-window {
+            width: 520px;
+            background: #0B1C38;
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .window-header {
+            background: rgba(255,255,255,0.03);
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); }
+
+        .window-content { padding: 32px; }
+
+        .ai-input-demo {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .typing-text {
+            font-family: monospace;
+            border-right: 2px solid var(--accent-cyan);
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(30, end) forwards infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .processing-result {
+            background: rgba(0, 194, 255, 0.05);
+            border: 1px dashed rgba(0, 194, 255, 0.3);
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+        }
+
+        .tag-row { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+        .tag {
+            background: rgba(0, 194, 255, 0.15);
+            color: var(--accent-cyan);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .ai-status {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--accent-blue);
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .skeleton-line {
+            height: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: var(--bg-surface-hover);
+            padding: 16px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .fc-1 { top: 15%; right: 10%; animation: float 5s infinite ease-in-out; }
+        .fc-2 { bottom: 15%; left: 5%; animation: float 6s infinite ease-in-out reverse; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body vid="6">
+    <div class="ambient-glow" vid="7"></div>
+
+    <header vid="8">
+        <div class="logo-area" vid="9">
+            <div class="logo-icon" vid="10">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="white" vid="11">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 17l-2.5-7.25L12 11zm0 8l-5-2.5-5 2.5L12 22l10-3-5-2.5-5 2.5z" vid="12"></path>
+                </svg>
+            </div>
+            <div class="logo-text" vid="13">SEOMate</div>
+        </div>
+        <div style="color: var(--text-secondary); font-size: 0.9rem;" vid="14">v2.4.0 Premium Access</div>
+    </header>
+
+    <main class="onboarding-layout" vid="15">
+        <section class="content-side" vid="16">
+            <div class="welcome-badge" vid="17">
+                <span vid="18">👋 Добро пожаловать в будущее SEO</span>
+            </div>
+            <h1 vid="19">Давайте создадим вашу первую карточку</h1>
+            <p class="subtext" vid="20">SEOMate использует продвинутый ИИ для анализа рынка и автоматического составления идеальных заголовков и описаний.</p>
+            
+            <div class="steps" vid="21">
+                <div class="step-item" vid="22">
+                    <div class="step-num" vid="23">1</div>
+                    <div class="step-text" vid="24">
+                        <h4 vid="25">Загрузите товары</h4>
+                        <p vid="26">Импортируйте Excel-файл или добавьте ссылку на Wildberries/Ozon.</p>
+                    </div>
+                </div>
+                <div class="step-item" vid="27">
+                    <div class="step-num" vid="28">2</div>
+                    <div class="step-text" vid="29">
+                        <h4 vid="30">Настройте параметры</h4>
+                        <p vid="31">Выберите стиль текста, ключевые слова и целевую аудиторию.</p>
+                    </div>
+                </div>
+                <div class="step-item" vid="32">
+                    <div class="step-num" vid="33">3</div>
+                    <div class="step-text" vid="34">
+                        <h4 vid="35">Получите результат</h4>
+                        <p vid="36">ИИ сгенерирует SEO-оптимизированный контент за секунды.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn-primary" vid="37">Начать работу</a>
+        </section>
+
+        <section class="preview-side" vid="38">
+            <div class="floating-card fc-1" vid="39">
+                <div style="width: 32px; height: 32px; background: #2ECC71; border-radius: 8px; display: flex; align-items: center; justify-content: center;" vid="40">📈</div>
+                <div vid="41">
+                    <div style="font-size: 0.75rem; color: var(--text-secondary);" vid="42">Прогноз CTR</div>
+                    <div style="font-weight: 700; color: #2ECC71;" vid="43">+24.5%</div>
+                </div>
+            </div>
+
+            <div class="floating-card fc-2" vid="44">
+                <div style="width: 32px; height: 32px; background: #00C2FF; border-radius: 8px; display: flex; align-items: center; justify-content: center;" vid="45">🔍</div>
+                <div vid="46">
+                    <div style="font-size: 0.75rem; color: var(--text-secondary);" vid="47">Найдено ключей</div>
+                    <div style="font-weight: 700;" vid="48">142 фразы</div>
+                </div>
+            </div>
+
+            <div class="preview-window" vid="49">
+                <div class="window-header" vid="50">
+                    <div class="dot" vid="51"></div>
+                    <div class="dot" vid="52"></div>
+                    <div class="dot" vid="53"></div>
+                    <div style="font-size: 0.75rem; color: var(--text-secondary); margin-left: auto;" vid="54">Preview Mode</div>
+                </div>
+                <div class="window-content" vid="55">
+                    <div class="ai-input-demo" vid="56">
+                        <div style="font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase;" vid="57">Input: Название товара</div>
+                        <div class="typing-text" style="color: white; font-size: 0.9rem;" vid="58">Смартфон беспроводная зарядка черный...</div>
+                    </div>
+                    
+                    <div class="processing-result" vid="59">
+                        <div class="ai-status" vid="60">AI Magic</div>
+                        <div class="skeleton-line" style="width: 40%; background: var(--accent-cyan); opacity: 0.5;" vid="61"></div>
+                        <div class="skeleton-line" vid="62"></div>
+                        <div class="skeleton-line" vid="63"></div>
+                        <div class="skeleton-line" style="width: 70%;" vid="64"></div>
+                        
+                        <div class="tag-row" vid="65">
+                            <span class="tag" vid="66">#быстрая_зарядка</span>
+                            <span class="tag" vid="67">#флагман_2024</span>
+                            <span class="tag" vid="68">#OLED_экран</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 24px; display: flex; justify-content: space-between; align-items: center;" vid="69">
+                        <div style="display: flex; gap: 4px;" vid="70">
+                            <div style="width: 20px; height: 4px; background: var(--accent-blue); border-radius: 2px;" vid="71"></div>
+                            <div style="width: 20px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px;" vid="72"></div>
+                            <div style="width: 20px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px;" vid="73"></div>
+                        </div>
+                        <div style="font-size: 0.8rem; color: var(--success-green); font-weight: 600;" vid="74">SEO Score: 98/100</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+</body></html>

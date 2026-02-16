@@ -1,0 +1,427 @@
+<html lang="ru" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">SEOMate | Панель управления AI</title>
+    <style vid="5">
+        :root {
+            --bg-deep: #030B18; 
+            --bg-surface: #0B1C38; 
+            --bg-surface-hover: #122547;
+            --accent-cyan: #00C2FF; 
+            --accent-blue: #0075FF; 
+            --text-main: #FFFFFF;
+            --text-secondary: #8FA4C4; 
+            --border-highlight: #2A4E85;
+            --success-green: #2ECC71; 
+            --grad-primary: linear-gradient(90deg, #00C2FF 0%, #0075FF 100%);
+            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-pill: 999px;
+            --space-xs: 8px;
+            --space-s: 16px;
+            --space-m: 24px;
+            --space-l: 40px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-stack);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 60vw;
+            height: 60vw;
+            background: radial-gradient(circle, rgba(0, 117, 255, 0.08) 0%, rgba(3, 11, 24, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        header {
+            padding: var(--space-s) var(--space-l);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: rgba(3, 11, 24, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--grad-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr 320px;
+            flex: 1;
+            gap: 1px;
+            background: rgba(255,255,255,0.05);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sidebar {
+            background: var(--bg-deep);
+            padding: var(--space-m);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-m);
+        }
+
+        .sidebar-item {
+            padding: 12px 16px;
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s;
+        }
+
+        .sidebar-item.active {
+            background: rgba(0, 194, 255, 0.1);
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .content-area {
+            background: var(--bg-deep);
+            padding: var(--space-m);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-m);
+        }
+
+        .processing-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: var(--space-m);
+        }
+
+        .status-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-m);
+        }
+
+        .badge-live {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(46, 204, 113, 0.1);
+            color: var(--success-green);
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .progress-container {
+            margin: var(--space-m) 0;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 74%;
+            background: var(--grad-primary);
+            box-shadow: 0 0 10px rgba(0, 194, 255, 0.5);
+            transition: width 1s ease;
+        }
+
+        .grid-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-m);
+        }
+
+        .data-box {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: var(--radius-sm);
+            padding: var(--space-s);
+        }
+
+        .data-box h4 {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-s);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .keyword-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .keyword-tag {
+            background: var(--bg-surface-hover);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(0, 194, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .keyword-tag span {
+            color: var(--success-green);
+            font-size: 0.75rem;
+        }
+
+        .ai-text-preview {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            white-space: pre-wrap;
+            position: relative;
+        }
+
+        .ai-text-preview::after {
+            content: "";
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background: var(--accent-cyan);
+            vertical-align: middle;
+            margin-left: 2px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .inspector-panel {
+            background: var(--bg-deep);
+            padding: var(--space-m);
+            border-left: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-m);
+        }
+
+        .export-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-action {
+            width: 100%;
+            padding: 14px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: var(--bg-surface);
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .btn-action:hover {
+            background: var(--bg-surface-hover);
+            border-color: var(--accent-cyan);
+        }
+
+        .btn-primary-action {
+            background: var(--grad-primary);
+            border: none;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .stat-label { color: var(--text-secondary); font-size: 0.9rem; }
+        .stat-value { font-weight: 600; }
+    </style>
+</head>
+<body vid="6">
+    <div class="ambient-glow" vid="7"></div>
+
+    <header vid="8">
+        <div class="logo-area" vid="9">
+            <div class="logo-icon" vid="10">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" vid="11">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 17l-2.5-7.25L12 11zm0 8l-5-2.5-5 2.5L12 22l10-3-5-2.5-5 2.5z" vid="12"></path>
+                </svg>
+            </div>
+            <div class="logo-text" vid="13">SEOMate AI</div>
+        </div>
+        <div style="display: flex; gap: 20px; align-items: center;" vid="14">
+            <span style="color: var(--text-secondary); font-size: 0.9rem;" vid="15">Тариф: <strong style="color: var(--accent-cyan);" vid="16">Premium+</strong></span>
+            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--grad-primary);" vid="17"></div>
+        </div>
+    </header>
+
+    <main class="main-layout" vid="18">
+        <aside class="sidebar" vid="19">
+            <a href="#" class="sidebar-item" vid="20">Dashboard</a>
+            <a href="#" class="sidebar-item active" vid="21">Генерация карточек</a>
+            <a href="#" class="sidebar-item" vid="22">Анализ конкурентов</a>
+            <a href="#" class="sidebar-item" vid="23">История проектов</a>
+            <a href="#" class="sidebar-item" vid="24">Настройки AI</a>
+            
+            <div style="margin-top: auto; padding: 20px; background: rgba(0,194,255,0.05); border-radius: 16px;" vid="25">
+                <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 10px;" vid="26">Лимиты генерации</p>
+                <div class="progress-bar" style="height: 4px;" vid="27">
+                    <div class="progress-fill" style="width: 45%;" vid="28"></div>
+                </div>
+                <p style="font-size: 0.75rem; text-align: right;" vid="29">450 / 1000</p>
+            </div>
+        </aside>
+
+        <section class="content-area" vid="30">
+            <div class="processing-card" vid="31">
+                <div class="status-header" vid="32">
+                    <div vid="33">
+                        <h2 style="margin-bottom: 4px;" vid="34">Анализ: Смарт-часы Ultra S2</h2>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;" vid="35">Категория: Электроника / Гаджеты</p>
+                    </div>
+                    <div class="badge-live" vid="36">
+                        <span style="width: 6px; height: 6px; background: var(--success-green); border-radius: 50%;" vid="37"></span>
+                        AI Обработка
+                    </div>
+                </div>
+
+                <div class="progress-container" vid="38">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;" vid="39">
+                        <span vid="40">Общий прогресс</span>
+                        <span style="color: var(--accent-cyan); font-weight: 700;" vid="41">74%</span>
+                    </div>
+                    <div class="progress-bar" vid="42">
+                        <div class="progress-fill" vid="43"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);" vid="44">Текущий этап: Оптимизация SEO-описания на основе трендов Ozon/WB</p>
+                </div>
+
+                <div class="grid-panel" vid="45">
+                    <div class="data-box" vid="46">
+                        <h4 vid="47">Подобрано ключевых слов <span vid="48">14 / 20</span></h4>
+                        <div class="keyword-list" vid="49">
+                            <div class="keyword-tag" vid="50">смарт-часы <span vid="51">+24%</span></div>
+                            <div class="keyword-tag" vid="52">фитнес трекер <span vid="53">+18%</span></div>
+                            <div class="keyword-tag" vid="54">apple watch style <span vid="55">+42%</span></div>
+                            <div class="keyword-tag" vid="56">водонепроницаемые <span vid="57">+12%</span></div>
+                            <div class="keyword-tag" vid="58">nfc оплата <span vid="59">+30%</span></div>
+                            <div class="keyword-tag" vid="60">мониторинг сна <span vid="61">NEW</span></div>
+                            <div class="keyword-tag" style="opacity: 0.5; border-style: dashed;" vid="62">анализ...</div>
+                        </div>
+                    </div>
+                    <div class="data-box" vid="63">
+                        <h4 vid="64">Генерация описания <span style="color: var(--accent-cyan);" vid="65">Live</span></h4>
+                        <div class="ai-text-preview" vid="66">Смарт-часы Ultra S2 — это идеальное сочетание стиля и технологий. Корпус из авиационного алюминия обеспечивает надежность, а AMOLED-дисплей с пиковой яркостью 1000 нит гарантирует отличную видимость даже под прямым солнцем. Основные преимущества: 
+- Автономность до 14 дней
+- Продвинутый датчик SpO2
+- Встроенный GPS и Глонасс...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-m);" vid="67">
+                <div class="data-box" vid="68">
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);" vid="69">Прогноз конверсии</p>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--success-green); margin-top: 5px;" vid="70">+14.2%</div>
+                </div>
+                <div class="data-box" vid="71">
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);" vid="72">SEO Score</p>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--accent-cyan); margin-top: 5px;" vid="73">92/100</div>
+                </div>
+                <div class="data-box" vid="74">
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);" vid="75">Конкурентность</p>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: #F1C40F; margin-top: 5px;" vid="76">Средняя</div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="inspector-panel" vid="77">
+            <h3 vid="78">Параметры экспорта</h3>
+            
+            <div class="export-options" vid="79">
+                <button class="btn-action" vid="80">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" vid="81"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" vid="82"></path></svg>
+                    Скачать Excel (.xlsx)
+                </button>
+                <button class="btn-action" vid="83">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" vid="84"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" vid="85"></rect><line x1="3" y1="9" x2="21" y2="9" vid="86"></line><line x1="9" y1="21" x2="9" y2="9" vid="87"></line></svg>
+                    Выгрузить в Ozon
+                </button>
+                <button class="btn-action" vid="88">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" vid="89"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" vid="90"></path></svg>
+                    Выгрузить в WB
+                </button>
+                <button class="btn-action btn-primary-action" vid="91">
+                    Сохранить черновик
+                </button>
+            </div>
+
+            <div style="margin-top: 20px;" vid="92">
+                <h4 style="margin-bottom: 15px; font-size: 0.9rem; color: var(--text-secondary);" vid="93">Детализация процесса</h4>
+                <div class="stat-row" vid="94">
+                    <span class="stat-label" vid="95">Затрачено токенов</span>
+                    <span class="stat-value" vid="96">1,242</span>
+                </div>
+                <div class="stat-row" vid="97">
+                    <span class="stat-label" vid="98">Время обработки</span>
+                    <span class="stat-value" vid="99">4.2 сек</span>
+                </div>
+                <div class="stat-row" vid="100">
+                    <span class="stat-label" vid="101">Режим</span>
+                    <span class="stat-value" style="color: var(--accent-cyan);" vid="102">Creative AI</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+</body></html>

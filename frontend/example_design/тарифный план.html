@@ -1,0 +1,408 @@
+<html lang="ru" vid="0"><head vid="1">
+    <meta charset="UTF-8" vid="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" vid="3">
+    <title vid="4">Тарифы | SEOMate</title>
+    <style vid="5">
+        :root {
+            --bg-deep: #030B18; 
+            --bg-surface: #0B1C38; 
+            --bg-surface-hover: #122547;
+            --accent-cyan: #00C2FF; 
+            --accent-blue: #0075FF; 
+            --text-main: #FFFFFF;
+            --text-secondary: #8FA4C4; 
+            --border-highlight: #2A4E85;
+            --success-green: #2ECC71; 
+            
+            --grad-primary: linear-gradient(90deg, #00C2FF 0%, #0075FF 100%);
+            --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 32px;
+            --radius-pill: 999px;
+            
+            --space-s: 16px;
+            --space-m: 24px;
+            --space-l: 40px;
+            --space-xl: 80px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-stack);
+            overflow-x: hidden;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        .ambient-glow {
+            position: fixed;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(0, 117, 255, 0.08) 0%, rgba(3, 11, 24, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-m);
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            padding: var(--space-m) 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-m);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(3, 11, 24, 0.8);
+        }
+
+        .header-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--grad-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 194, 255, 0.4);
+        }
+
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 var(--space-m);
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--space-l);
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: var(--space-s);
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .btn-primary {
+            background: var(--grad-primary);
+            color: white;
+            box-shadow: 0 4px 20px rgba(0, 194, 255, 0.3);
+        }
+
+        .pricing-section {
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .pricing-header {
+            margin-bottom: var(--space-xl);
+        }
+
+        .pricing-header h1 {
+            font-size: 3rem;
+            margin-bottom: var(--space-s);
+            background: linear-gradient(180deg, #FFFFFF 0%, #D0D9E6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pricing-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-m);
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: var(--space-l);
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            background: var(--bg-surface-hover);
+            border-color: rgba(0, 194, 255, 0.2);
+        }
+
+        .pricing-card.popular {
+            background: linear-gradient(165deg, #0B1C38 0%, #051025 100%);
+            border: 1px solid rgba(0, 194, 255, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .badge-popular {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--grad-primary);
+            padding: 6px 16px;
+            border-radius: var(--radius-pill);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .plan-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: var(--space-s);
+            color: var(--text-main);
+        }
+
+        .plan-price {
+            margin-bottom: var(--space-m);
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .price-currency {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+        }
+
+        .price-period {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: var(--space-l);
+            flex-grow: 1;
+        }
+
+        .plan-features li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .plan-features li svg {
+            color: var(--accent-cyan);
+            min-width: 18px;
+        }
+
+        .plan-features li.disabled {
+            opacity: 0.4;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+        }
+
+        @media (max-width: 960px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .pricing-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body vid="6">
+    <div class="ambient-glow" vid="7"></div>
+
+    <header vid="8">
+        <div class="header-top" vid="9">
+            <div class="logo-area" vid="10">
+                <div class="logo-icon" vid="11">
+                    <svg viewBox="0 0 24 24" vid="12">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 17l-2.5-7.25L12 11zm0 8l-5-2.5-5 2.5L12 22l10-3-5-2.5-5 2.5z" vid="13"></path>
+                    </svg>
+                </div>
+                <div class="logo-text" vid="14">SEOMate</div>
+            </div>
+        </div>
+        <div class="nav-row" vid="15">
+            <nav vid="16">
+                <ul vid="17">
+                    <li vid="18"><a href="#" vid="19">О сервисе</a></li>
+                    <li vid="20"><a href="#" class="active" vid="21">Тарифы</a></li>
+                    <li vid="22"><a href="#" vid="23">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons" vid="24">
+                <a href="#" class="btn btn-ghost" vid="25">Войти</a>
+                <a href="#" class="btn btn-primary" vid="26">Регистрация</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" vid="27">
+        <section class="pricing-section" vid="28">
+            <div class="pricing-header" vid="29">
+                <h1 vid="30">Выберите свой план</h1>
+                <p vid="31">Прозрачные условия без скрытых платежей. Масштабируйте ваш бизнес на маркетплейсах вместе с нами.</p>
+            </div>
+
+            <div class="pricing-grid" vid="32">
+                
+                <div class="pricing-card" vid="33">
+                    <div class="plan-name" vid="34">Free</div>
+                    <div class="plan-price" vid="35">
+                        <span class="price-amount" vid="36">0</span>
+                        <span class="price-currency" vid="37">₽</span>
+                        <span class="price-period" vid="38">/ мес</span>
+                    </div>
+                    <ul class="plan-features" vid="39">
+                        <li vid="40"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="41"><path d="M5 13l4 4L19 7" vid="42"></path></svg> 5 карточек в месяц</li>
+                        <li vid="43"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="44"><path d="M5 13l4 4L19 7" vid="45"></path></svg> Базовое SEO-описание</li>
+                        <li vid="46"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="47"><path d="M5 13l4 4L19 7" vid="48"></path></svg> Анализ 1 конкурента</li>
+                        <li class="disabled" vid="49"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="50"><path d="M6 18L18 6M6 6l12 12" vid="51"></path></svg> Экспорт в Excel</li>
+                        <li class="disabled" vid="52"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="53"><path d="M6 18L18 6M6 6l12 12" vid="54"></path></svg> Приоритетная поддержка</li>
+                    </ul>
+                    <a href="#" class="btn btn-ghost" vid="55">Начать бесплатно</a>
+                </div>
+
+                
+                <div class="pricing-card popular" vid="56">
+                    <div class="badge-popular" vid="57">Популярный</div>
+                    <div class="plan-name" vid="58">Pro</div>
+                    <div class="plan-price" vid="59">
+                        <span class="price-amount" vid="60">2 900</span>
+                        <span class="price-currency" vid="61">₽</span>
+                        <span class="price-period" vid="62">/ мес</span>
+                    </div>
+                    <ul class="plan-features" vid="63">
+                        <li vid="64"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="65"><path d="M5 13l4 4L19 7" vid="66"></path></svg> 100 карточек в месяц</li>
+                        <li vid="67"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="68"><path d="M5 13l4 4L19 7" vid="69"></path></svg> Продвинутая AI генерация</li>
+                        <li vid="70"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="71"><path d="M5 13l4 4L19 7" vid="72"></path></svg> Безлимитный анализ ниши</li>
+                        <li vid="73"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="74"><path d="M5 13l4 4L19 7" vid="75"></path></svg> Экспорт в Excel/CSV</li>
+                        <li class="disabled" vid="76"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="77"><path d="M6 18L18 6M6 6l12 12" vid="78"></path></svg> Персональный менеджер</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" vid="79">Выбрать Pro</a>
+                </div>
+
+                
+                <div class="pricing-card" vid="80">
+                    <div class="plan-name" vid="81">Premium+</div>
+                    <div class="plan-price" vid="82">
+                        <span class="price-amount" vid="83">7 500</span>
+                        <span class="price-currency" vid="84">₽</span>
+                        <span class="price-period" vid="85">/ мес</span>
+                    </div>
+                    <ul class="plan-features" vid="86">
+                        <li vid="87"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="88"><path d="M5 13l4 4L19 7" vid="89"></path></svg> Безлимитные карточки</li>
+                        <li vid="90"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="91"><path d="M5 13l4 4L19 7" vid="92"></path></svg> Кастомные промпты ИИ</li>
+                        <li vid="93"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="94"><path d="M5 13l4 4L19 7" vid="95"></path></svg> API интеграция</li>
+                        <li vid="96"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="97"><path d="M5 13l4 4L19 7" vid="98"></path></svg> Мультиаккаунт (до 5 чел)</li>
+                        <li vid="99"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" vid="100"><path d="M5 13l4 4L19 7" vid="101"></path></svg> Поддержка 24/7</li>
+                    </ul>
+                    <a href="#" class="btn btn-ghost" vid="102">Связаться с нами</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body></html>
