@@ -3344,3 +3344,9 @@ sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class
 2026-02-17 22:50:50 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
 2026-02-17 22:51:20 - itemgate - INFO - Запрос: GET /health
 2026-02-17 22:51:20 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:51:50 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:51:50 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:52:20 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:52:20 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:52:50 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:52:50 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
