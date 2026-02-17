@@ -1,0 +1,603 @@
+2026-02-18 00:16:54 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:18:45 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:18:45 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 401 | Время: 0.036с
+2026-02-18 00:18:54 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:18:54 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.275с
+2026-02-18 00:18:55 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:18:55 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.006с
+2026-02-18 00:18:55 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-18 00:18:56 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.055с
+2026-02-18 00:18:57 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-18 00:18:57 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.012с
+2026-02-18 00:22:00 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-18 00:22:00 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.009с
+2026-02-18 00:22:01 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-18 00:22:01 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.007с
+2026-02-18 00:22:02 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-18 00:22:02 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.010с
+2026-02-18 00:25:36 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:25:36 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 00:25:36 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:25:36 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 00:25:36 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-18 00:25:36 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.032с
+2026-02-18 00:25:36 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-18 00:25:36 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.039с
+2026-02-18 00:29:56 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:29:57 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.222с
+2026-02-18 00:29:58 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:29:58 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.002с
+2026-02-18 00:29:58 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-18 00:29:58 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.032с
+2026-02-18 00:30:01 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-18 00:30:01 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.009с
+2026-02-18 00:30:14 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:30:14 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 00:30:14 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:30:14 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 00:30:14 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-18 00:30:14 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.034с
+2026-02-18 00:30:14 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-18 00:30:14 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.042с
+2026-02-18 00:30:25 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:30:26 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.225с
+2026-02-18 00:30:27 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:30:27 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 00:30:27 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-18 00:30:27 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.037с
+2026-02-18 00:30:29 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-18 00:30:29 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.008с
+2026-02-18 00:30:30 - itemgate - INFO - Запрос: GET /sima-land/logs
+2026-02-18 00:30:30 - itemgate - INFO - Ответ: GET /sima-land/logs | Статус: 200 | Время: 0.008с
+2026-02-18 00:31:23 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-18 00:31:23 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.009с
+2026-02-18 00:31:24 - itemgate - INFO - Запрос: GET /sima-land/logs
+2026-02-18 00:31:24 - itemgate - INFO - Ответ: GET /sima-land/logs | Статус: 200 | Время: 0.006с
+2026-02-18 00:35:28 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:27 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.274с
+2026-02-18 00:51:27 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:27 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:51:27 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:27 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.015с
+2026-02-18 00:51:27 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:27 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.003с
+2026-02-18 00:51:27 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:27 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.005с
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.230с
+2026-02-18 00:51:27 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:27 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.222с
+2026-02-18 00:51:27 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:27 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:27 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:51:27 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.225с
+2026-02-18 00:51:28 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:28 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:28 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.007с
+2026-02-18 00:51:28 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:28 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:28 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.005с
+2026-02-18 00:51:28 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.226с
+2026-02-18 00:51:28 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.006с
+2026-02-18 00:51:28 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:28 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:28 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.001с
+2026-02-18 00:51:28 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:28 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:28 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.002с
+2026-02-18 00:51:28 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:28 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:28 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:51:28 - itemgate - INFO - Health check called
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.002с
+2026-02-18 00:51:28 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:28 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:28 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:51:28 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:51:28 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:56 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:56 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.276с
+2026-02-18 00:51:57 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:57 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:51:57 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:57 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:51:57 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:57 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:51:57 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:57 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.231с
+2026-02-18 00:51:57 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:57 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.005с
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.220с
+2026-02-18 00:51:57 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:57 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.003с
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.224с
+2026-02-18 00:51:57 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:57 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.006с
+2026-02-18 00:51:57 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:57 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:51:57 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:51:57 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:51:58 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.225с
+2026-02-18 00:51:58 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:51:58 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 00:51:58 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:58 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:58 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:51:58 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.001с
+2026-02-18 00:51:58 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:58 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:58 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:51:58 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.003с
+2026-02-18 00:51:58 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:58 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:58 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:51:58 - itemgate - INFO - Health check called
+2026-02-18 00:51:58 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.001с
+2026-02-18 00:51:58 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:51:58 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:51:58 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:51:58 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:51:58 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:52:38 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:52:38 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:52:38 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.272с
+2026-02-18 00:52:38 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:52:38 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.229с
+2026-02-18 00:52:38 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:52:38 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 00:52:38 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:52:38 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 00:52:38 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:52:38 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:52:38 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:52:38 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.228с
+2026-02-18 00:52:38 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:52:39 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.224с
+2026-02-18 00:52:39 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:52:39 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.232с
+2026-02-18 00:52:39 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:52:39 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.223с
+2026-02-18 00:52:39 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:52:39 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 00:52:39 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:52:39 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 00:52:39 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:52:39 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:52:39 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:52:40 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.224с
+2026-02-18 00:52:40 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:52:40 - itemgate - INFO - Ответ: GET /auth/me | Статус: 400 | Время: 0.003с
+2026-02-18 00:52:40 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:52:40 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:52:40 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:52:40 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.224с
+2026-02-18 00:52:40 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:52:40 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 00:52:40 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:03 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:03 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.273с
+2026-02-18 00:53:04 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:04 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.003с
+2026-02-18 00:53:04 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:04 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:53:04 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:04 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:53:04 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:04 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.228с
+2026-02-18 00:53:04 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:04 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.220с
+2026-02-18 00:53:04 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:04 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.005с
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.225с
+2026-02-18 00:53:04 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:04 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.007с
+2026-02-18 00:53:04 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:04 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:04 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:53:04 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:53:05 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.224с
+2026-02-18 00:53:05 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:53:05 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 00:53:05 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:05 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:05 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:53:05 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.001с
+2026-02-18 00:53:05 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:05 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:05 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:53:05 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.002с
+2026-02-18 00:53:05 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:05 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:05 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:53:05 - itemgate - INFO - Health check called
+2026-02-18 00:53:05 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.002с
+2026-02-18 00:53:05 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:05 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:05 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:53:05 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:53:05 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:40 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:53:40 - itemgate - INFO - Health check called
+2026-02-18 00:53:40 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.001с
+2026-02-18 00:53:40 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:53:40 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:53:43 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:43 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.264с
+2026-02-18 00:53:43 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:43 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:43 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.005с
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:43 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.003с
+2026-02-18 00:53:43 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:43 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:43 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:53:43 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:43 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:43 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:53:43 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:43 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:43 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:53:43 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.229с
+2026-02-18 00:53:43 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:43 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:43 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:53:43 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.221с
+2026-02-18 00:53:44 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:44 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.224с
+2026-02-18 00:53:44 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:44 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.007с
+2026-02-18 00:53:44 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:44 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.224с
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 00:53:44 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:44 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.001с
+2026-02-18 00:53:44 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:44 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.002с
+2026-02-18 00:53:44 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:44 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:53:44 - itemgate - INFO - Health check called
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.001с
+2026-02-18 00:53:44 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:53:44 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:53:44 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:53:44 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:53:44 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:09 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:55:09 - itemgate - INFO - Health check called
+2026-02-18 00:55:09 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.001с
+2026-02-18 00:55:09 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:55:09 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:55:12 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:12 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:12 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.263с
+2026-02-18 00:55:12 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:12 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:12 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:12 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:55:12 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:12 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:55:12 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:12 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:12 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:12 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:55:12 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:12 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:12 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:12 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:55:12 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:12 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:12 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:12 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.006с
+2026-02-18 00:55:12 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.231с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:13 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.003с
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.222с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:13 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.223с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:13 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.007с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:13 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.224с
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:13 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.001с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:13 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.003с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:13 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:55:13 - itemgate - INFO - Health check called
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.001с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:55:13 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:55:13 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:55:13 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:55:13 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:06 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:58:06 - itemgate - INFO - Health check called
+2026-02-18 00:58:06 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.001с
+2026-02-18 00:58:06 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:58:06 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:58:09 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:09 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:09 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.265с
+2026-02-18 00:58:09 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:09 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:09 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:09 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:58:09 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:09 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:58:09 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:09 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:09 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:09 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 00:58:09 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:09 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:09 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:09 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.003с
+2026-02-18 00:58:09 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:09 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:09 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:09 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.005с
+2026-02-18 00:58:09 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.239с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.003с
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.221с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.224с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.007с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.005с
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.224с
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.001с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.003с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: GET /
+2026-02-18 00:58:10 - itemgate - INFO - Health check called
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.002с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 00:58:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 00:58:10 - itemgate - INFO - Запрос: GET /health
+2026-02-18 00:58:10 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 00:58:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:07 - itemgate - INFO - Запрос: GET /
+2026-02-18 01:01:07 - itemgate - INFO - Health check called
+2026-02-18 01:01:07 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.001с
+2026-02-18 01:01:07 - itemgate - INFO - Запрос: GET /health
+2026-02-18 01:01:07 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 01:01:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.264с
+2026-02-18 01:01:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.005с
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.003с
+2026-02-18 01:01:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 01:01:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 422 | Время: 0.002с
+2026-02-18 01:01:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.006с
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:10 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.227с
+2026-02-18 01:01:10 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:10 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:10 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.003с
+2026-02-18 01:01:10 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.221с
+2026-02-18 01:01:11 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:11 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.225с
+2026-02-18 01:01:11 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:11 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: POST /auth/login | Статус: 401 | Время: 0.007с
+2026-02-18 01:01:11 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:11 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: POST /auth/register | Статус: 400 | Время: 0.004с
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.225с
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.005с
+2026-02-18 01:01:11 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:11 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.001с
+2026-02-18 01:01:11 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:11 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: GET /auth/me | Статус: 401 | Время: 0.002с
+2026-02-18 01:01:11 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:11 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: GET /
+2026-02-18 01:01:11 - itemgate - INFO - Health check called
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: GET / | Статус: 200 | Время: 0.001с
+2026-02-18 01:01:11 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:11 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:11 - itemgate - INFO - Запрос: GET /health
+2026-02-18 01:01:11 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-18 01:01:11 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:14 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:14 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:14 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.268с
+2026-02-18 01:01:14 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:14 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.227с
+2026-02-18 01:01:14 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:14 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 01:01:14 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:14 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 01:01:14 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:14 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:14 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:15 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.227с
+2026-02-18 01:01:15 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-18 01:01:15 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.225с
+2026-02-18 01:01:15 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:15 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.222с
+2026-02-18 01:01:15 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:15 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.223с
+2026-02-18 01:01:15 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:15 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 01:01:15 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:15 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.003с
+2026-02-18 01:01:15 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:15 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:16 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:16 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.223с
+2026-02-18 01:01:16 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:16 - itemgate - INFO - Ответ: GET /auth/me | Статус: 400 | Время: 0.003с
+2026-02-18 01:01:16 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-18 01:01:16 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-18 01:01:16 - itemgate - INFO - Запрос: POST /auth/login
+2026-02-18 01:01:16 - itemgate - INFO - Ответ: POST /auth/login | Статус: 200 | Время: 0.223с
+2026-02-18 01:01:16 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-18 01:01:16 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-18 01:01:16 - itemgate - INFO - 🛑 ItemGate API остановлен

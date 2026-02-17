@@ -58,6 +58,18 @@ async def generate_ai_description(
         ai_response = await openRouterClient.get_response(user_data=str(request_item))
         response = ai_response.model_dump()
         logger.info("[AI_GENERATE] Получен ответ от AI")
+    except HTTPException as e:
+        detail = str(e.detail) if hasattr(e, 'detail') else str(e)
+        log = Log(
+            user_id=current_user.id,
+            action='generate_error',
+            item_id=catalog_item.id,
+            message=f"Ошибка генерации AI: {detail}",
+            status='error'
+        )
+        db.add(log)
+        await db.commit()
+        raise
     except Exception as e:
         # Логируем ошибку
         log = Log(

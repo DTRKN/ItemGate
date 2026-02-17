@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from datetime import datetime
 
 class LogResponse(BaseModel):
@@ -9,5 +9,4 @@ class LogResponse(BaseModel):
     message: str | None
     status: str | None
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

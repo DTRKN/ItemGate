@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 from typing import Optional
 from datetime import datetime
 
@@ -15,8 +15,7 @@ class ItemSchema(BaseModel):
     image_title: Optional[str] = Field(None, max_length=150)
     price: float
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 class ItemView(BaseModel):
     id_item: Optional[str] = Field(None, max_length=36)
@@ -26,8 +25,7 @@ class ItemView(BaseModel):
     image_title: Optional[str] = Field(None, max_length=150)
     price: float
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
     
 class ItemInfo_ai(BaseModel):
     Description: str = Field(description="Описание товара от AI")
@@ -44,5 +42,4 @@ class ItemWithAI(BaseModel):
     photoUrl: Optional[str] = None
     stuff: Optional[str] = None
     
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

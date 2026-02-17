@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from routers.sima_land import router as sima_land_router
@@ -6,7 +7,15 @@ from routers.excel import router as excel_router
 from services.logger import log_info, log_error
 import time
 
-app = FastAPI(title="ItemGate API", version="0.1.0")
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
+    log_info("🚀 ItemGate API запущен")
+    yield
+    # Shutdown
+    log_info("🛑 ItemGate API остановлен")
+
+app = FastAPI(title="ItemGate API", version="0.1.0", lifespan=lifespan)
 
 # Middleware для логирования запросов
 @app.middleware("http")
@@ -66,14 +75,6 @@ async def health_check():
 @app.get('/health')
 async def health():
     return {"status": "healthy"}
-
-@app.on_event("startup")
-async def startup_event():
-    log_info("🚀 ItemGate API запущен")
-
-@app.on_event("shutdown")
-async def shutdown_event():
-    log_info("🛑 ItemGate API остановлен")
 
 if __name__ == "__main__":
     import uvicorn

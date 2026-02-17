@@ -1,14 +1,14 @@
 import { useState, useEffect, useMemo } from 'react'
 import AuthForm from './components/AuthForm'
 import ItemCard from './components/ItemCard'
-import CreateItem from './components/CreateItem'
 import { apiClient, authService } from './api/client'
 import './styles/index.css'
 
 export default function App() {
   const normalizePath = (path) => {
-    if (path === '/login' || path === '/register' || path === '/pricing') {
-      return path
+    const cleanPath = path.replace(/\/+$/, '') || '/'
+    if (cleanPath === '/login' || cleanPath === '/register' || cleanPath === '/pricing') {
+      return cleanPath
     }
     return '/'
   }
@@ -634,9 +634,6 @@ export default function App() {
             <button className={`nav-link ${tab==='ai'?'active':''}`} onClick={() => { setTab('ai'); fetchAiItems(); }}>
               Описание ИИ
             </button>
-            <button className={`nav-link ${tab==='create'?'active':''}`} onClick={() => setTab('create')}>
-              Создать товар
-            </button>
             {isAdmin && (
               <>
                 <button className={`nav-link ${tab==='logs'?'active':''}`} onClick={() => { setTab('logs'); handleFetchLogs(); }}>
@@ -761,10 +758,6 @@ export default function App() {
                   </div>
                 </div>
               </div>
-            )}
-
-            {tab === 'create' && (
-              <CreateItem onSuccess={() => setTab('all')} onCancel={() => setTab('all')} />
             )}
 
             {tab === 'logs' && isAdmin && (

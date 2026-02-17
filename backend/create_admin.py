@@ -6,9 +6,9 @@
 import asyncio
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.exc import ProgrammingError
 from services.auth import get_password_hash
 from models.users import User, UserRole
-from models.base import Base
 from config import Config
 from schemas.user import UserCreate
 from pydantic import ValidationError
@@ -28,9 +28,17 @@ async def create_admin():
     async with async_session() as session:
         # Проверяем, есть ли уже админ
         from sqlalchemy import select
-        result = await session.execute(
-            select(User).where(User.role == UserRole.ADMIN)
-        )
+        try:
+            result = await session.execute(
+                select(User).where(User.role == UserRole.ADMIN)
+            )
+        except ProgrammingError as e:
+            error_text = str(e)
+            if "UndefinedTableError" in error_text or 'relation "users" does not exist' in error_text:
+                print("❌ Таблица users не найдена. Сначала примени миграции.")
+                print("   Команда: docker compose exec backend alembic upgrade head")
+                return
+            raise
         existing_admin = result.scalar_one_or_none()
 
         # await session.delete(existing_admin)

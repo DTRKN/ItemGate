@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:8000'
+const API_BASE = import.meta.env.VITE_API_BASE || '/api'
 
 // Управление токеном
 const TOKEN_KEY = 'auth_token'
@@ -105,7 +105,16 @@ export const apiClient = {
         headers: getHeaders(),
       }
     )
-    if (!response.ok) throw new Error('Failed to generate description')
+    if (!response.ok) {
+      let detail = 'Failed to generate description'
+      try {
+        const error = await response.json()
+        detail = error?.detail || error?.message || detail
+      } catch (_) {
+        // ignore json parse error and keep default message
+      }
+      throw new Error(detail)
+    }
     return response.json()
   },
 

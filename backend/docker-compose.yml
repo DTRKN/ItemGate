@@ -23,6 +23,28 @@ services:
       - itemgate_network
 
   # === Backend (FastAPI) ===
+  migrate:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: itemgate_migrate
+    command: ["alembic", "upgrade", "head"]
+    environment:
+      USE_POSTGRES: "true"
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      AI_KEY: ${AI_KEY}
+      SECRET_KEY: ${SECRET_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+    networks:
+      - itemgate_network
+
   backend:
     build:
       context: ./
@@ -45,11 +67,40 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5)"]
       interval: 30s
       timeout: 10s
       retries: 3
+    networks:
+      - itemgate_network
+
+  # === Backend tests ===
+  tests:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: itemgate_tests
+    command: ["python", "quick_test.py"]
+    environment:
+      USE_POSTGRES: "true"
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      AI_KEY: ${AI_KEY}
+      SECRET_KEY: ${SECRET_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    restart: "no"
+    profiles:
+      - test
     networks:
       - itemgate_network
 
