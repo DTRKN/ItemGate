@@ -3012,3 +3012,335 @@ sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class
 2026-02-17 22:29:18 - itemgate - INFO - Запрос: GET /health
 2026-02-17 22:29:18 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
 2026-02-17 22:29:46 - itemgate - INFO - 🛑 ItemGate API остановлен
+2026-02-17 22:30:16 - itemgate - INFO - 🚀 ItemGate API запущен
+2026-02-17 22:30:44 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:30:44 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.007с
+2026-02-17 22:31:14 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:31:14 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:31:42 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-17 22:31:43 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.402с
+2026-02-17 22:31:44 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:31:44 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:31:44 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-17 22:31:44 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.006с
+2026-02-17 22:31:45 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-17 22:31:45 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.054с
+2026-02-17 22:31:49 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-17 22:31:49 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.016с
+2026-02-17 22:31:55 - itemgate - INFO - Запрос: GET /sima-land/logs
+2026-02-17 22:31:55 - itemgate - INFO - Ответ: GET /sima-land/logs | Статус: 200 | Время: 0.018с
+2026-02-17 22:32:02 - itemgate - INFO - Запрос: POST /sima-land/search_item_to_word/Конверт
+2026-02-17 22:32:02 - itemgate - INFO - Ответ: POST /sima-land/search_item_to_word/Конверт | Статус: 200 | Время: 0.026с
+2026-02-17 22:32:06 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-17 22:32:06 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.024с
+2026-02-17 22:32:11 - itemgate - INFO - Запрос: POST /sima-land/search_item_to_word/Пакет
+2026-02-17 22:32:11 - itemgate - INFO - Ответ: POST /sima-land/search_item_to_word/Пакет | Статус: 200 | Время: 0.009с
+2026-02-17 22:32:14 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:32:14 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:32:15 - itemgate - INFO - Запрос: POST /sima-land/ai_generate_desc_seller/33
+2026-02-17 22:32:15 - itemgate - INFO - Запрос: POST /sima-land/ai_generate_desc_seller/35
+2026-02-17 22:32:16 - itemgate - INFO - Запрос: POST /sima-land/ai_generate_desc_seller/49
+2026-02-17 22:32:23 - itemgate - ERROR - Ошибка: POST /sima-land/ai_generate_desc_seller/35 | Время: 7.822с | Ошибка: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $4: 35 (expected str, got int)
+[SQL: INSERT INTO log (user_id, timestamp, action, item_id, message, status, created_at, updated_at) VALUES ($1::INTEGER, $2::TIMESTAMP WITHOUT TIME ZONE, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE, $8::TIMESTAMP WITHOUT TIME ZONE) RETURNING log.id]
+[parameters: (1, datetime.datetime(2026, 2, 17, 22, 32, 23, 598338), 'generate_error', 35, 'Ошибка генерации AI: Expecting value: line 1 column 1 (char 0)', 'error', datetime.datetime(2026, 2, 17, 22, 32, 23, 598342), datetime.datetime(2026, 2, 17, 22, 32, 23, 598344))]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+Traceback (most recent call last):
+  File "/app/routers/sima_land/ai_generate.py", line 58, in generate_ai_description
+    ai_response = await openRouterClient.get_response(user_data=str(request_item))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/services/ai_client.py", line 55, in get_response
+    data_dict = json.loads(str(content))
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "asyncpg/protocol/prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg/protocol/codecs/base.pyx", line 251, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg/protocol/codecs/base.pyx", line 153, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg/pgproto/codecs/text.pyx", line 29, in asyncpg.pgproto.pgproto.text_encode
+  File "asyncpg/pgproto/codecs/text.pyx", line 12, in asyncpg.pgproto.pgproto.as_pg_string_and_size
+TypeError: expected str, got int
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 550, in _prepare_and_execute
+    self._rows = deque(await prepared_stmt.fetch(*parameters))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/asyncpg/prepared_stmt.py", line 177, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/asyncpg/prepared_stmt.py", line 268, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/asyncpg/prepared_stmt.py", line 257, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 184, in bind_execute
+  File "asyncpg/protocol/prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $4: 35 (expected str, got int)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $4: 35 (expected str, got int)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/main.py", line 29, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/starlette/middleware/base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "/root/.local/lib/python3.11/site-packages/starlette/middleware/base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/root/.local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/root/.local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/root/.local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/root/.local/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/root/.local/lib/python3.11/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/root/.local/lib/python3.11/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/root/.local/lib/python3.11/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/root/.local/lib/python3.11/site-packages/fastapi/routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/root/.local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/root/.local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/root/.local/lib/python3.11/site-packages/fastapi/routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/fastapi/routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/fastapi/routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/routers/sima_land/ai_generate.py", line 83, in generate_ai_description
+    await db.commit()
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/ext/asyncio/session.py", line 1000, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 203, in greenlet_spawn
+    result = context.switch(value)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2030, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1311, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1286, in _prepare_impl
+    self.session.flush()
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4331, in flush
+    self._flush(objects)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4466, in _flush
+    with util.safe_reraise():
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4427, in _flush
+    flush_context.execute()
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 527, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2363, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 952, in do_execute
+    cursor.execute(statement, parameters)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 585, in execute
+    self._adapt_connection.await_(
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 563, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 513, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/root/.local/lib/python3.11/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 797, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $4: 35 (expected str, got int)
+[SQL: INSERT INTO log (user_id, timestamp, action, item_id, message, status, created_at, updated_at) VALUES ($1::INTEGER, $2::TIMESTAMP WITHOUT TIME ZONE, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE, $8::TIMESTAMP WITHOUT TIME ZONE) RETURNING log.id]
+[parameters: (1, datetime.datetime(2026, 2, 17, 22, 32, 23, 598338), 'generate_error', 35, 'Ошибка генерации AI: Expecting value: line 1 column 1 (char 0)', 'error', datetime.datetime(2026, 2, 17, 22, 32, 23, 598342), datetime.datetime(2026, 2, 17, 22, 32, 23, 598344))]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-02-17 22:32:23 - itemgate - INFO - Ответ: POST /sima-land/ai_generate_desc_seller/49 | Статус: 200 | Время: 7.054с
+2026-02-17 22:32:24 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-17 22:32:25 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.041с
+2026-02-17 22:32:25 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-17 22:32:25 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.015с
+2026-02-17 22:32:26 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-17 22:32:26 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.012с
+2026-02-17 22:32:34 - itemgate - INFO - Ответ: POST /sima-land/ai_generate_desc_seller/33 | Статус: 200 | Время: 19.120с
+2026-02-17 22:32:34 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-17 22:32:34 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.032с
+2026-02-17 22:32:34 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-17 22:32:34 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.011с
+2026-02-17 22:32:44 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:32:44 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:33:14 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:33:14 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:33:45 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:33:45 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:34:15 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:34:15 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:34:45 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:34:45 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.003с
+2026-02-17 22:35:15 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:35:15 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:35:45 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:35:45 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:36:15 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:36:15 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:36:46 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:36:46 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:37:16 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:37:16 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:37:46 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:37:46 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:38:16 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:38:16 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:38:46 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:38:46 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:39:16 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:39:16 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:39:46 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:39:46 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:40:17 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:40:17 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:40:39 - itemgate - INFO - Запрос: POST /auth/register
+2026-02-17 22:40:39 - itemgate - INFO - Ответ: POST /auth/register | Статус: 201 | Время: 0.247с
+2026-02-17 22:40:39 - itemgate - INFO - Запрос: POST /auth/login-json
+2026-02-17 22:40:39 - itemgate - INFO - Ответ: POST /auth/login-json | Статус: 200 | Время: 0.225с
+2026-02-17 22:40:41 - itemgate - INFO - Запрос: GET /auth/me
+2026-02-17 22:40:41 - itemgate - INFO - Ответ: GET /auth/me | Статус: 200 | Время: 0.004с
+2026-02-17 22:40:41 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-17 22:40:41 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.032с
+2026-02-17 22:40:42 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-17 22:40:42 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.005с
+2026-02-17 22:40:44 - itemgate - INFO - Запрос: POST /sima-land/ai_generate_desc_seller/500
+2026-02-17 22:40:44 - itemgate - INFO - Запрос: POST /sima-land/ai_generate_desc_seller/499
+2026-02-17 22:40:47 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:40:47 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:40:51 - itemgate - INFO - Ответ: POST /sima-land/ai_generate_desc_seller/499 | Статус: 200 | Время: 6.860с
+2026-02-17 22:40:51 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-17 22:40:51 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.025с
+2026-02-17 22:40:51 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-17 22:40:51 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.007с
+2026-02-17 22:40:52 - itemgate - INFO - Ответ: POST /sima-land/ai_generate_desc_seller/500 | Статус: 200 | Время: 8.324с
+2026-02-17 22:40:52 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-17 22:40:52 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.021с
+2026-02-17 22:40:52 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-17 22:40:52 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.006с
+2026-02-17 22:40:53 - itemgate - INFO - Запрос: GET /sima-land/get_items_sellers
+2026-02-17 22:40:53 - itemgate - INFO - Ответ: GET /sima-land/get_items_sellers | Статус: 200 | Время: 0.006с
+2026-02-17 22:41:17 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:41:17 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:41:47 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:41:47 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:42:05 - itemgate - INFO - Запрос: POST /sima-land/search_item_to_word/Лопата
+2026-02-17 22:42:05 - itemgate - INFO - Ответ: POST /sima-land/search_item_to_word/Лопата | Статус: 200 | Время: 0.006с
+2026-02-17 22:42:07 - itemgate - INFO - Запрос: GET /sima-land/get_items
+2026-02-17 22:42:07 - itemgate - INFO - Ответ: GET /sima-land/get_items | Статус: 200 | Время: 0.088с
+2026-02-17 22:42:17 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:42:17 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:42:47 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:42:47 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:43:17 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:43:17 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:43:48 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:43:48 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:44:18 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:44:18 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:44:48 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:44:48 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:45:18 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:45:18 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:45:48 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:45:48 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:46:18 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:46:18 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:46:48 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:46:48 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:47:19 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:47:19 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:47:49 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:47:49 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.004с
+2026-02-17 22:48:19 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:48:19 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:48:49 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:48:49 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.003с
+2026-02-17 22:49:19 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:49:19 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:49:49 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:49:49 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:50:19 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:50:19 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
+2026-02-17 22:50:50 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:50:50 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.002с
+2026-02-17 22:51:20 - itemgate - INFO - Запрос: GET /health
+2026-02-17 22:51:20 - itemgate - INFO - Ответ: GET /health | Статус: 200 | Время: 0.001с
