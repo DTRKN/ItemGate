@@ -1,9 +1,9 @@
 ![MVP Alpha](https://img.shields.io/badge/MVP-alpha-ff8c00)
 # ItemGate — AI-платформа для продавцов маркетплейсов
 
-![Смотреть демо]([https://drive.google.com/file/d/182SpX3bEfREwbr8fEn2y3P7hnirWkzHL/view?usp=sharing](https://drive.google.com/file/d/182SpX3bEfREwbr8fEn2y3P7hnirWkzHL/view?usp=sharing))
+![Смотреть демо](https://drive.google.com/file/d/182SpX3bEfREwbr8fEn2y3P7hnirWkzHL/view?usp=sharing)
 
-<video src="[https://drive.google.com/file/d/182SpX3bEfREwbr8fEn2y3P7hnirWkzHL/view?usp=sharing](https://drive.google.com/file/d/182SpX3bEfREwbr8fEn2y3P7hnirWkzHL/view?usp=sharing)" width="320" height="240" controls></video>
+<video src="https://drive.google.com/file/d/182SpX3bEfREwbr8fEn2y3P7hnirWkzHL/view?usp=sharing" width="320" height="240" controls></video>
 
 ItemGate помогает продавцам быстро создавать SEO-оптимизированные карточки товаров: от загрузки каталога до генерации описаний и ключевых слов с помощью ИИ.  
 Фокус проекта — MVP, скорость запуска и практическая польза для реальной e-commerce работы.
